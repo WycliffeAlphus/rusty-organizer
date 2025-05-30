@@ -5,3 +5,11 @@ use std::{
     error::Error,
     path::{Path, PathBuf},
 }
+
+
+#[derive(Debug, Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ValueEnum)]
+
+enum OrganizeMode {
+    Extension,
+    Type,
+}
