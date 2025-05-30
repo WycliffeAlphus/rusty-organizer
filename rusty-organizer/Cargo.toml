@@ -2,5 +2,11 @@
 name = "rusty-organizer"
 version = "0.1.0"
 edition = "2024"
+authors = ["Wycliffe Onyango wycliffealphus7@gmail.com"]
+description = "A simple CLI tool to sort files by type/extension"
+license = "MIT"
+repository = "https://github.com/WycliffeAlphus/rusty-organizer"
 
 [dependencies]
+clap = { version = "4.4", features = ["derive"] }
+rayon = "1.8"
