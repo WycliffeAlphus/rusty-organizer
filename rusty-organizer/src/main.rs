@@ -13,3 +13,11 @@ enum OrganizeMode {
     Extension,
     Type,
 }
+
+#[derive(Parser, Debug)]
+#[command(
+    author,
+    version,
+    about = "Rusty Organizer - A simple CLI tool to sort files by type/extension",
+    long_about = None
+)]
