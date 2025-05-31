@@ -1,24 +1,27 @@
 
 Running the program:
 
+
+For example for the Downloads directory:
+
 1.
 
 ```
-cargo run -- --source my_folder --mode type --verbose
+cargo run -- --source ~/Downloads --mode type --verbose
 ```
 or
 
 ```
-cargo run -- --source my_folder --mode type --dry-run
+cargo run -- --source ~/Downloads --mode type --dry-run
 ```
 2.
 ```
-cargo run -- --source my_folder --mode extension --verbose
+cargo run -- --source ~/Downloads --mode extension --verbose
 ```
 or
 
 ```
-cargo run -- --source my_folder --mode extension --dry-run
+cargo run -- --source ~/Downloads --mode extension --dry-run
 ```
 
 
