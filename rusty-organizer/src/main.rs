@@ -39,7 +39,7 @@ struct Args {
     verbose: bool,
 }
 
-fn main() -> Result<(), Box<dyn Error>> {
+fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
     let args = Args::parse();
     let source_dir = Path::new(&args.source);
 
@@ -80,7 +80,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             fs::rename(file, &new_path)?;
         }
 
-        Ok::<(), Box<dyn Error>>(())
+        Ok::<(), Box<dyn Error + Send + Sync>>(())
     })?;
 
     if args.dry_run {
@@ -92,7 +92,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
-fn collect_files(dir: &Path) -> Result<Vec<PathBuf>, Box<dyn Error>> {
+fn collect_files(dir: &Path) -> Result<Vec<PathBuf>, Box<dyn Error + Send + Sync>> {
     let mut files = Vec::new();
 
     for entry in fs::read_dir(dir)? {
